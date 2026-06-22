@@ -4,22 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Шаурмания</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <nav class="nav">
-        <div class="nav__container">
-          <img class="nav__logo" src="img/logo.png" alt="Шаурмания" />
+        <div class="nav__container container">
+          <img class="nav__logo" src="img/header/logo.svg" alt="Шаурмания" />
           <div class="nav__controls">
-            <p class="nav__number"/p>
+            <p class="nav__number">+7 (914) 123 45-67</p>
             <button class="nav__btn">Заказать звонок</button>
           </div>
         </div>
       </nav>
     </header>
     <main class="main">
-      <section class="slider"></section>
+      <section class="slider">
+        <div class="slider__container container">
+          <div class="slider__carousel">
+            <img class="slider__prev" src="img/slider/prev.svg" alt="Назад" />
+            <img class="slider__img" src="img/slider/1.png" alt="" />
+            <img class="slider__next" src="img/slider/next.svg" alt="Вперед" />
+          </div>
+          <p class="slider__title">Готовим за 3 минуты</p>
+          <div class="slider__bubbles">
+            <div class="slider__bubble"></div>
+            <div class="slider__bubble"></div>
+            <div class="slider__bubble active"></div>
+            <div class="slider__bubble"></div>
+          </div>
+        </div>
+      </section>
       <section class="features"></section>
       <section class="menu"></section>
       <section class="about-us"></section>
