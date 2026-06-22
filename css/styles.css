@@ -29,6 +29,11 @@ body {
   color: var(--color-black);
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 .nav {
   background-color: var(--accent-primary);
 
@@ -117,4 +122,10 @@ body {
 
 .slider__title {
   padding-block: 18px;
+}
+
+.slider__prev,
+.slider__next {
+  border: none;
+  background-color: transparent;
 }
