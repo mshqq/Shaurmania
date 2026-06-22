@@ -266,6 +266,8 @@ header {
 
 .menu__card-img {
   border-radius: 14px 14px 0 0;
+  width: 100%;
+  height: auto;
 }
 
 .menu__goodies {
@@ -451,7 +453,7 @@ header {
 
 @media (max-width: 1314px) {
   .menu__card {
-    flex: 1;
+    flex: 1 1 280px;
   }
 }
 
