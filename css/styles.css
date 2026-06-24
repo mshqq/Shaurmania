@@ -537,3 +537,9 @@ header {
   padding: 8px;
   font-size: 14px;
 }
+
+@media (max-width: 487px) {
+  .slider__img {
+    padding-inline: 40px;
+  }
+}
