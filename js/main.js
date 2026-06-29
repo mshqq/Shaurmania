@@ -19,7 +19,7 @@ document.querySelectorAll('.menu__category').forEach(button => {
   });
 });
 
-menuParent = document.querySelector('.menu__goodies');
+const menuParent = document.querySelector('.menu__goodies');
 
 let goodies = [
   {
@@ -87,8 +87,10 @@ let goodies = [
   }
 ];
 
+let menu = '';
+
 goodies.forEach(product => {
-  menuParent.innerHTML += `
+  menu += `
   <div class="menu__card" data-category="${product.category}">
     <img src="${product.img}" alt="${product.alt}" class="menu__card-img" />
       <div class="menu__card-desc">
@@ -97,6 +99,8 @@ goodies.forEach(product => {
       </div>
   </div>`;
 });
+
+menuParent.innerHTML = menu;
 
 let current = 0;
 let slides = document.querySelectorAll('.slide');
@@ -172,6 +176,6 @@ function showError(input, message) {
 function clearError(input) {
   input.classList.remove('error');
 
-  const error = input.nextElementSibling;
+  const error = input.previousElementSibling;
   if (error) error.textContent = '';
 }

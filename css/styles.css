@@ -239,16 +239,16 @@ header {
 }
 
 .features__list {
-  display: flex;
-  justify-content: space-between;
-  gap: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .feature {
   background-color: var(--features-bg);
   border-radius: 16px;
 
-  padding: 3% 7% 3% 7%;
+  padding: 7%;
 
   display: flex;
   flex-direction: column;
@@ -288,11 +288,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .menu__title {
   padding-block: 30px 16px;
+
+  text-align: center;
 
   font-size: 36px;
   font-weight: 900;
@@ -304,6 +305,7 @@ header {
   display: flex;
   gap: 9px;
   margin-bottom: 42px;
+  align-self: center;
 }
 
 .menu__category {
@@ -335,9 +337,8 @@ header {
 }
 
 .menu__goodies {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -566,6 +567,31 @@ span.error {
   grid-column: 1 / -1;
 }
 
+.alert {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+* {
+  cursor: none !important;
+}
+.cursor {
+  width: 40px;
+  height: 40px;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/1923/1923423.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(320deg); /* ← сюда */
+  z-index: 9999;
+}
+
 @media (max-width: 1314px) {
   .menu__card {
     flex: 1 1 280px;
@@ -573,6 +599,14 @@ span.error {
 }
 
 @media (max-width: 1024px) {
+  * {
+    cursor: default;
+  }
+
+  .cursor {
+    display: none;
+  }
+
   /* Планшет */
   body {
     overflow-x: hidden;
@@ -582,9 +616,26 @@ span.error {
     max-width: 240px;
   }
 
+  .menu__goodies {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .features__list {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    padding: 2%;
+  }
+
   .form-entry,
   .form-button {
     width: 100%;
+  }
+
+  .form__container {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 
   .about-us__img {
@@ -603,15 +654,11 @@ span.error {
   /* мобилка */
 
   .menu__goodies {
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
   }
 
   .menu__categories {
     flex-wrap: wrap;
-  }
-
-  .features__list {
-    flex-direction: column;
   }
 
   .about-us__img {
@@ -656,27 +703,12 @@ span.error {
   }
 }
 
-.alert {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 8px;
-  font-size: 14px;
-}
+@media (max-width: 550px) {
+  .menu__goodies {
+    grid-template-columns: 1fr;
+  }
 
-* {
-  cursor: none !important;
-}
-.cursor {
-  width: 40px;
-  height: 40px;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/1923/1923423.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%) rotate(320deg); /* ← сюда */
-  z-index: 9999;
+  .slider__img {
+    padding-inline: 73px;
+  }
 }
