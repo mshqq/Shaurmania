@@ -102,6 +102,8 @@ header {
 }
 
 .nav__btn {
+  z-index: 102;
+
   padding: 15px 18px 15px 18px;
 
   font-size: 15px;
@@ -573,6 +575,16 @@ span.error {
   text-align: center;
   padding: 8px;
   font-size: 14px;
+}
+
+.gazan {
+  max-width: 40px;
+  position: absolute;
+  top: 30px;
+  right: 640px;
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(270deg);
+  z-index: 101;
 }
 
 * {
