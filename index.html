@@ -41,16 +41,33 @@
             <button class="slider__prev">
               <img src="img/slider/prev.svg" alt="Назад" />
             </button>
-            <img class="slider__img" src="img/slider/1.png" alt="" />
+            <div class="slides-wrapper">
+              <div class="slide active">
+                <img class="slider__img" src="img/slider/1.png" alt="" />
+                <p class="slider__title">Готовим за 3 минуты</p>
+              </div>
+              <div class="slide">
+                <img class="slider__img" src="img/slider/salad.png" alt="" />
+                <p class="slider__title">Свежие ингредиенты каждый день</p>
+              </div>
+              <div class="slide">
+                <img class="slider__img" src="img/slider/pin.png" alt="" />
+                <p class="slider__title">13 точек по всей Чите</p>
+              </div>
+              <div class="slide">
+                <img class="slider__img" src="img/slider/giftbox.png" alt="" />
+                <p class="slider__title">Скидка 10% на первый заказ</p>
+              </div>
+            </div>
             <button class="slider__next">
               <img src="img/slider/next.svg" alt="Вперед" />
             </button>
           </div>
-          <p class="slider__title">Готовим за 3 минуты</p>
+
           <div class="slider__bubbles">
-            <div class="slider__bubble"></div>
-            <div class="slider__bubble"></div>
             <div class="slider__bubble active"></div>
+            <div class="slider__bubble"></div>
+            <div class="slider__bubble"></div>
             <div class="slider__bubble"></div>
           </div>
         </div>
@@ -81,83 +98,15 @@
         <div class="menu__container container">
           <h3 class="menu__title">Наше меню</h3>
           <ul class="menu__categories">
-            <button class="menu__category active" onclick="selectCategory(id)" id="all">Все</button>
-            <button class="menu__category" onclick="selectCategory(id)" id="shaverma">
-              Шаурма
-            </button>
-            <button class="menu__category" onclick="selectCategory(id)" id="kesadilya">
+            <button class="menu__category active" id="all" data-category="all">Все</button>
+            <button class="menu__category" id="shaurma" data-category="shaurma">Шаурма</button>
+            <button class="menu__category" id="kesadilya" data-category="kesadilya">
               Кесадилья
             </button>
-            <button class="menu__category" onclick="selectCategory(id)" id="snacks">Снеки</button>
-            <button class="menu__category" onclick="selectCategory(id)" id="drinks    ">
-              Напитки
-            </button>
+            <button class="menu__category" id="snacks" data-category="snacks">Снеки</button>
+            <button class="menu__category" id="drinks" data-category="drinks">Напитки</button>
           </ul>
-          <ul class="menu__goodies">
-            <div class="menu__card">
-              <img src="img/menu/Шаурма деревенская.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Шаурма деревенская</p>
-                <p class="menu__card-price">329 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Шаурма с курицей и овощами .png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Шаурма с курицей и овощами</p>
-                <p class="menu__card-price">325 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Шаурма овощная маленькая.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Шаурма овощная маленькая</p>
-                <p class="menu__card-price">239 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Шаурма по-корейски маленькая.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Шаурма по-корейски маленькая</p>
-                <p class="menu__card-price">329 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Картофель фри.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Картофель фри</p>
-                <p class="menu__card-price">330 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Буртуч.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Буртуч</p>
-                <p class="menu__card-price">399 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Наггетсы.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Наггетсы</p>
-                <p class="menu__card-price">315 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Сырные палочки.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Сырные палочки</p>
-                <p class="menu__card-price">315 ₽</p>
-              </div>
-            </div>
-            <div class="menu__card">
-              <img src="img/menu/Кесадилья со свининой.png" alt="" class="menu__card-img" />
-              <div class="menu__card-desc">
-                <p class="menu__card-title">Кесадилья со свининой</p>
-                <p class="menu__card-price">399 ₽</p>
-              </div>
-            </div>
-          </ul>
+          <ul class="menu__goodies"></ul>
         </div>
       </section>
       <section class="about-us">
@@ -178,7 +127,6 @@
           <div class="form__info">
             <h3 class="form__info-title">О компании</h3>
             <ul class="form__info-features">
-              <li class="form__info-feature">ИП Труфанов Н.Д.</li>
               <li class="form__info-feature">Работаем с 2022 года</li>
               <li class="form__info-feature">13 точек в Чите</li>
               <li class="form__info-feature">Цены от 239 ₽</li>
@@ -186,25 +134,17 @@
           </div>
           <div class="form-block">
             <h3 class="form-title">Получайте акции первыми</h3>
-            <form class="form-group" action="">
-              <input
-                class="form-entry"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Ваше имя"
-                required
-              />
-              <input
-                class="form-entry"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                required
-              />
-              <input class="form-button" type="button" value="Подписаться" onclick="subscribe()" />
-            </form>
+            <div class="form-group">
+              <div>
+                <span class="error"></span>
+                <input class="form-entry" type="text" id="name" placeholder="Ваше имя" />
+              </div>
+              <div>
+                <span class="error"></span>
+                <input class="form-entry" type="email" id="email" placeholder="Email" />
+              </div>
+              <input class="form-button" type="button" value="Подписаться" />
+            </div>
           </div>
         </div>
       </section>
